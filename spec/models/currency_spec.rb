@@ -1,7 +1,7 @@
 require 'open-uri'
 RSpec.describe Currency do
   it 'can update rates' do
-    Currency.update_rates
+    Currency.update_rates!
     expect(Currency.exists?(name: "Доллар США")).to be true
     expect(Currency.exists?(name: "Евро")).to be true
     usd = Nokogiri::XML(URI.open(Currency::CURRENCY_URL)).xpath('//Valute[@ID="R01235"]')

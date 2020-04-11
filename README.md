@@ -17,7 +17,3 @@ GET /currencies/:id — должен возвращать курс валюты 
 
 Наличие тестов обязательно.
 API должно быть закрыто bearer авторизацией.
-
-
-Auth: https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api
-https://medium.com/binar-academy/rails-api-jwt-authentication-a04503ea3248
