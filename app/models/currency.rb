@@ -3,7 +3,7 @@ require 'open-uri'
 
 class Currency < ApplicationRecord
 
-  CURRENCY_URL = "http://www.cbr.ru/scripts/XML_daily.asp"
+  CURRENCY_URL = Rails.application.credentials.currency[:url]
 
   def self.update_rates!
     rates = Nokogiri::XML(URI.open(CURRENCY_URL)).xpath('//Valute').map do |n|
